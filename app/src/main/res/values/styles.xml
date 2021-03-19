@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="baseET">
+        <item name="android:textColorHint">@color/grayHint</item>
+        <item name="android:layout_width">328dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">99dp</item>
+        <item name="android:layout_marginLeft">99dp</item>
+        <item name="android:layout_marginEnd">99dp</item>
+        <item name="android:layout_marginRight">99dp</item>
+        <item name="android:background">@drawable/et_background</item>
+        <item name="android:ems">10</item>
+        <item name="android:inputType">textEmailAddress</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="SignInBase">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/btn_background</item>
+        <item name="android:backgroundTint">@color/red</item>
+        <item name="android:layout_width">328dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">161dp</item>
+        <item name="android:layout_marginLeft">161dp</item>
+        <item name="android:layout_marginEnd">162dp</item>
+        <item name="android:layout_marginRight">162dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
+    <style name="SignUpBase">
+        <item name="android:background">@drawable/et_background</item>
+        <item name="android:backgroundTintMode">multiply</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:layout_width">328dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">162dp</item>
+        <item name="android:layout_marginLeft">162dp</item>
+        <item name="android:layout_marginEnd">161dp</item>
+        <item name="android:layout_marginRight">161dp</item>
+        <item name="android:layout_marginBottom">75dp</item>
+    </style>
+
+
+</resources>

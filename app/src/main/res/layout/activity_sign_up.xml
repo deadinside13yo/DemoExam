@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screen.LaunchScreen.SignUpScreen.SignUp">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="102dp"
+        android:layout_marginLeft="102dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="102dp"
+        android:layout_marginRight="102dp"
+        android:layout_marginBottom="43dp"
+        app:layout_constraintBottom_toTopOf="@+id/NameET"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_lauch_screen_207" />
+
+    <EditText
+
+        android:id="@+id/NameET"
+        style="@style/baseET"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
+        android:layout_marginLeft="99dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginRight="99dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Имя"
+        android:textColorHint="@color/grayHint"
+        app:layout_constraintBottom_toTopOf="@+id/LastNameET"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/LastNameET"
+        style="@style/baseET"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
+        android:layout_marginLeft="99dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginRight="99dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Фамилия"
+        android:textColorHint="@color/grayHint"
+        app:layout_constraintBottom_toTopOf="@+id/EmailSignUpET"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+
+        android:id="@+id/EmailSignUpET"
+        style="@style/baseET"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
+        android:layout_marginLeft="99dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginRight="99dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="Email"
+        android:textColorHint="@color/grayHint"
+        app:layout_constraintBottom_toTopOf="@+id/PasswordSignUpET"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/PasswordSignUpET"
+        style="@style/baseET"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
+        android:layout_marginLeft="99dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginRight="99dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="Пароль"
+        android:textColorHint="@color/grayHint"
+        app:layout_constraintBottom_toTopOf="@+id/RePasswordET"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/RePasswordET"
+        style="@style/baseET"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="103dp"
+        android:layout_marginLeft="103dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginRight="95dp"
+        android:layout_marginBottom="44dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="Повторите пароль"
+        android:textColorHint="@color/grayHint"
+        app:layout_constraintBottom_toTopOf="@+id/RegistrationBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.539"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/RegistrationBtn"
+        style="@style/SignInBase"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="162dp"
+        android:layout_marginLeft="162dp"
+        android:layout_marginEnd="161dp"
+        android:layout_marginRight="161dp"
+        android:layout_marginBottom="16dp"
+        android:text="Зарегистрироваться"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="@color/collorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/AlredyRegBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/AlredyRegBtn"
+        style="@style/SignUpBase"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="162dp"
+        android:layout_marginLeft="162dp"
+        android:layout_marginEnd="161dp"
+        android:layout_marginRight="161dp"
+        android:layout_marginBottom="56dp"
+        android:background="@drawable/et_background"
+        android:backgroundTint="@color/collorAccent"
+        android:backgroundTintMode="multiply"
+        android:text="У меня уже есть аккаунт"
+        app:backgroundTint="@color/collorAccent"
+        app:backgroundTintMode="multiply"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
