@@ -50,6 +50,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
+        android:onClick="SignIn"
         android:id="@+id/SignInBtn"
         android:text="Войти"
         app:backgroundTint="#FFFFFF"
@@ -61,6 +62,7 @@
         style="@style/SignInBase" />
 
     <Button
+        android:onClick="GoSignUp"
         android:id="@+id/SignUpBtn"
         android:text="Регистрация"
         app:backgroundTint="@color/collorAccent"
