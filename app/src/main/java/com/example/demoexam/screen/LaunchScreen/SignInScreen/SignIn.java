@@ -23,8 +23,8 @@ public class SignIn extends AppCompatActivity {
     }
     public void SignIn(View view){
         if(
-            !binding.EmailET.getText().toString().equals("")&&
-                    !binding.PasswordET.getText().toString().equals("")
+            !binding.EmailET.getText().toString().isEmpty()&&
+                    !binding.PasswordET.getText().toString().isEmpty()
             )
         {
             if (CheckData.checkMail(binding.EmailET.getText().toString())){

@@ -2,6 +2,7 @@ package com.example.demoexam.screen.LaunchScreen.SignUpScreen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -15,9 +16,12 @@ import com.example.demoexam.common.CheckData;
 import com.example.demoexam.common.URLs;
 import com.example.demoexam.common.entity.User;
 import com.example.demoexam.databinding.ActivitySignUpBinding;
+import com.example.demoexam.screen.LaunchScreen.SignInScreen.SignIn;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.Objects;
 
 public class SignUp extends AppCompatActivity {
 
@@ -35,10 +39,10 @@ public class SignUp extends AppCompatActivity {
 
     public void SignUp(View view) {
         if(
-                !binding.NameET.getText().toString().equals("")&&
-                        !binding.LastNameET.getText().toString().equals("")&&
-                        !binding.EmailSignUpET.getText().toString().equals("")&&
-                        !binding.PasswordSignUpET.getText().toString().equals("")
+                !binding.NameET.getText().toString().isEmpty()&&
+                        !binding.LastNameET.getText().toString().isEmpty()&&
+                        !binding.EmailSignUpET.getText().toString().isEmpty()&&
+                        !binding.PasswordSignUpET.getText().toString().isEmpty()
         )
         {
             if(CheckData.checkMail(binding.EmailSignUpET.getText().toString()))
@@ -61,12 +65,17 @@ public class SignUp extends AppCompatActivity {
                             URLs.REGISTER, user, new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject response) {
-
+                            CheckData.authConfirmed(SignUp.this,binding.EmailSignUpET.getText().toString(),binding.PasswordSignUpET.getText().toString());
                         }
                     }, new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
-                            CheckData.makeMessage("Проблема с регистрацией ошибка", SignUp.this);
+                            if(Objects.requireNonNull(error.getMessage()).contains("Успешная"))
+                            {
+                                CheckData.authConfirmed(SignUp.this, binding.EmailSignUpET.getText().toString(), binding.PasswordSignUpET.getText().toString());
+                            }
+                                else
+                                    CheckData.makeMessage("Проблема с регистрацией ошибка", SignUp.this);
                             }
                 });
                     AppData.getInstance(this).queue.add(signUpRequest);
@@ -83,5 +92,11 @@ public class SignUp extends AppCompatActivity {
         else {
             CheckData.makeMessage("Пустые поля", this);
         }
+    }
+
+    public void CanSign(View view) {
+        Intent SignIntent = new Intent(SignUp.this, SignIn.class);
+        startActivity(SignIntent);
+        finish();
     }
 }

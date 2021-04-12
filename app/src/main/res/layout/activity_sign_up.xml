@@ -135,6 +135,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
+        android:onClick="CanSign"
         android:id="@+id/AlredyRegBtn"
         style="@style/SignUpBase"
         android:layout_width="328dp"
