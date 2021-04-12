@@ -30,6 +30,9 @@ public class SignIn extends AppCompatActivity {
             if (CheckData.checkMail(binding.EmailET.getText().toString())){
                 CheckData.authConfirmed(SignIn.this, binding.EmailET.getText().toString(),
                         binding.PasswordET.getText().toString());
+
+
+
             }
             else{
                 CheckData.makeMessage("Некорректный e-mail", this);
